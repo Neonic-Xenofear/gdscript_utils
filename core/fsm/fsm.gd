@@ -18,7 +18,7 @@ func loadConfig( config : Dictionary = {} ) -> void:
 	if ( "currentState" in config ):
 		setCurrentState( config.currentState );
 	
-	Console.Log.info( str( statesParent ) + "FSM: Config loaded" );
+	print( str( statesParent ) + "FSM: Config loaded" );
 
 func setState( stateId : String, state ) -> void:
 	states[stateId] = state;

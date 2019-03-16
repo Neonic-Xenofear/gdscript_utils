@@ -46,7 +46,7 @@ class CSGLScriptInterpreter extends CBaseObject:
 		for item in dict:
 			scripts[item] = [dict[item].type, dict[item].src];
 		
-		Console.Log.info( "Dialog: Loaded config file" );
+		print( "Dialog: Loaded config file" );
 	
 	func loadScript( name : String ) -> bool:
 		if ( scripts.has( name ) ):
@@ -56,7 +56,7 @@ class CSGLScriptInterpreter extends CBaseObject:
 				loadText( scripts[name][1] );
 			return true;
 		else:
-			Console.Log.error( "Dialog Warning: Invalid script name for loading!" );
+			print( "Dialog Warning: Invalid script name for loading!" );
 			return false;
 	
 	func loadFile( fp : String ) -> void:

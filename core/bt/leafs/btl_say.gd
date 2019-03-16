@@ -7,5 +7,5 @@ func _initialize( args : Dictionary ) -> void:
 	printMessage = args["args"];
 
 func _onTick( tick : float ) -> int:
-	Console.Log.info( printMessage );
+	print( printMessage );
 	return BTS_SUCCESS;

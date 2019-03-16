@@ -128,7 +128,7 @@ class CSGLScript:
 		while ( funcInd != -1 ):
 			var funcEndInd : int = getNextCommandIndexByName( "func_end", funcInd );
 			if ( funcEndInd == -1 ):
-				Console.Log.error( "SGLScript: Cannot find function end!" );
+				print( "SGLScript: Cannot find function end!" );
 			
 			var resFunc : CSGLScriptFunc = CSGLScriptFunc.new();
 			resFunc.name = code[funcInd].args["name"];
@@ -254,7 +254,7 @@ class CSGLScript:
 	
 	func dc_print( args ) -> void:
 		if ( typeof( args["val"] ) != TYPE_STRING ):
-			Console.Log.info( args["val"] );
+			print( args["val"] );
 			return;
 		
 		var resStr : String = args["val"];
@@ -263,7 +263,7 @@ class CSGLScript:
 		for v in variables:
 			resStr = resStr.format( { v: str( v, ":", variables[v], " " ) } );
 		
-		Console.Log.info( resStr );
+		print( resStr );
 	
 	func dc_if( args ) -> void:
 		var res : bool = parseInputVal( args["val"] );
@@ -275,7 +275,7 @@ class CSGLScript:
 			elif ( currInd.endifIndex != -1 ):
 				index = currInd.endifIndex;
 			else:
-				Console.Log.error( "SGLScript: Can't find ENDIF statement!" );
+				print( "SGLScript: Can't find ENDIF statement!" )
 		
 	
 	func dc_endif( args ) -> void:
@@ -285,7 +285,7 @@ class CSGLScript:
 		if ( code[index].endifIndex != -1 ):
 			index = code[index].endifIndex;
 		else:
-			Console.Log.error( "SGLScript: Can't find ENDIF statement!" );
+			print( "SGLScript: Can't find ENDIF statement!" );
 
 class CSGLScriptParser:
 	var rawText : String = "";

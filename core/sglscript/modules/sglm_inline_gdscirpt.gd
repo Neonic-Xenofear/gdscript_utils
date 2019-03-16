@@ -26,7 +26,7 @@ func dc_inline_gdscript( args : Dictionary, callInterpreter = null ) -> void:
 		script.main();
 		
 	else:
-		Console.Log.Error( _className() + ": Unsupported loading type!" );
+		print( _className() + ": Unsupported loading type!" );
 
 func _className() -> String:
 	return "CSGLMInlineGDScript";
