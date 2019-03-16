@@ -1,0 +1,20 @@
+[VAR: ver_major: "1"]
+[VAR: ver_minor: "0"]
+[VAR: ver_path: "0"]
+
+[ARRAY_VAR: sglscript_ignore_commands: [
+	"func",
+	"func_end"
+]]
+
+;;SAVE
+[VAR: save_path: "user://saves"]
+[VAR: save_file_ext: "sv"]
+
+;;INHERITANCE
+[VAR: inheritance_file: "res://core.config/inheritance.json"]
+[ARRAY_VAR: inheritance_folders: ""]
+	[ARRAY_APPEND: inheritance_folders: "res://code/core/"]
+	
+	;;Append project dirs for inheritance
+	[IMPORT: path: "res://pcfg.sgl"]

@@ -1,0 +1,2 @@
+extends CBaseObject
+class_name CSGLModule
