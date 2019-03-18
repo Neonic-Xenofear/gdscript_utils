@@ -1,0 +1,5 @@
+[IMPORT: path: "res://ext_files/ai/basicBB.sgl"]
+
+[COMPOSITE: type: "sequence"]
+	[LEAF: type: "follow_x" args: ""]
+[END]

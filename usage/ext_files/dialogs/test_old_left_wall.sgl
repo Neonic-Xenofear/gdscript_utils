@@ -1,0 +1,20 @@
+[GVARS]
+
+[FUNC: name: "test"]
+	[PRINT: val: "Hello!"]
+[FUNC_END]
+
+[INLINE_GDSCRIPT: code: "
+
+func main():
+	pass
+
+"]
+
+[IF: val: "{playerMoney} >= 100"]
+	[TEST]
+	О, ты собрал нужную сумму
+[ELSE]
+	Мы договаривались на 100 золота, возвращайся когда наскребёшь нужное количество
+[ENDIF]
+[END]
